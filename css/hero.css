@@ -1,0 +1,278 @@
+
+        /* ===================================================
+           HERO SECTION
+           Layout: Full-width Spline 3D background behind text
+           =================================================== */
+        .hero {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: stretch;
+            padding-top: 72px;
+            overflow: hidden;
+        }
+
+        /* Spline 3D — absolute background layer */
+        .hero-spline-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        #canvas3d {
+            width: 100%;
+            height: 100%;
+            display: block;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        #canvas3d.loaded {
+            opacity: 1;
+        }
+
+        /* Spline loading overlay */
+        .spline-loader {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            z-index: 2;
+            background: var(--bg-primary);
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+
+        .spline-loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .spline-loader .spinner {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--border-default);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        .spline-loader .loader-text {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-dim);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Semi-transparent overlay to ensure text readability over 3D */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60%;
+            height: 100%;
+            background: transparent;
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 5;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 60px;
+            display: flex;
+            align-items: center;
+            min-height: calc(100vh - 72px);
+        }
+/* Import bold font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* Hero title with bold typography */
+.hero-title {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    line-height: 0.9; /* Makes lines sit close together */
+    letter-spacing: -2px; /* Tightens letters for oversized feel */
+    font-size: clamp(64px, 10vw, 140px);
+    font-weight: 900;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+    text-align: left;
+    /* REMOVE left: 50px; - this was pushing it right, not left */
+    /* Use margin-left to move left */
+    margin-left: -30px; /* Adjust this value to move left (negative = left, positive = right) */
+}
+
+/* Outline text effect */
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgb(255, 255, 255);
+    opacity: 0.8;
+}
+
+/* Accent color */
+.accent-text {
+    color: #FF6B00;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 72px);
+}
+
+/* Subcopy positioned on the right - Robo Labs Style */
+.hero__subcopy {
+    position: absolute;
+    right: -200px; /* Changed from -200px to 60px to match padding */
+    bottom: 15vh;
+    z-index: 30;
+    max-width: 420px;
+    text-align: right;
+    pointer-events: none;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Tagline - exactly like Robo Labs */
+.hero__tagline {
+    font-size: clamp(0.7rem, 1vw, 0.85rem);
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Optional: Style the // slash in orange like Robo Labs */
+.hero__tagline .slash {
+    color: #FF6B00;
+    font-weight: 600;
+    margin-right: 6px;
+}
+
+/* Description - exactly like Robo Labs */
+.hero__desc {
+    font-size: clamp(0.6rem, 0.9vw, 0.75rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.7;
+    color: #a0a0a0;
+    opacity: 0.8;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        margin-left: 0; /* Reset on mobile */
+    }
+    
+    .hero__subcopy {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin-top: 2rem;
+        max-width: 100%;
+        text-align: left;
+        padding: 0 24px;
+    }
+    
+    .hero__tagline, 
+    .hero__desc {
+        text-align: left;
+    }
+}
+
+        /* ===================================================
+           INFO BAND — Location + Case Study
+           =================================================== */
+        .info-band {
+            width: 100%;
+            background: var(--bg-deep);
+            border-top: 1px solid var(--border-default);
+            border-bottom: 1px solid var(--border-default);
+            padding: var(--space-lg) 60px;
+        }
+
+        .info-band-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .location-stamp {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .location-stamp .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                box-shadow: 0 0 0 0 rgba(255, 77, 0, 0.5);
+            }
+
+            50% {
+                opacity: 0.7;
+                box-shadow: 0 0 0 8px rgba(255, 77, 0, 0);
+            }
+        }
+
+        .info-side-text {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-muted);
+            max-width: 500px;
+            line-height: 1.7;
+        }
+
+        .info-side-text em {
+            font-family: var(--font-display);
+            font-style: italic;
+            color: var(--text-primary);
+        }

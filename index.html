@@ -1,0 +1,1927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ato Coders · Full-Service Digital Agency in Ethiopia</title>
+    <meta name="description"
+        content="Ato Coders is a full-service digital agency in Addis Ababa, Ethiopia. We craft modern websites, establish Google Maps presence, and deliver professional photography.">
+
+    <!-- Google Fonts: Inter + Instrument Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/dot.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/serv.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/price.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/logo.css">
+    <link rel="stylesheet" href="css/team.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/work.css">
+    <style>
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+  
+
+    <!-- ============================================
+         NAVBAR
+         ============================================ -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="nav-logo" id="navLogo">Ato Coders</a>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#services">SERVICES</a>
+            <a href="#about">ABOUT</a>
+            <a href="work.html">WORK</a>
+            <a href="team.html">TEAM</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+            <i class="fas fa-bars" id="menuIcon"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#services" onclick="closeMobileNav()">Services</a>
+        <a href="#about" onclick="closeMobileNav()">About</a>
+        <a href="work.html">Work</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+   <!-- ============================================
+     HERO SECTION — Bold Typography + 360° Robot
+     ============================================ -->
+<section class="hero" id="hero">
+
+   <!-- Ultra-small dot grid - contained in hero only -->
+    <div class="micro-dot-grid" id="dotGrid"></div>
+    
+    <!-- Layer 1: Spline 3D background (absolute, full viewport) -->
+    <div class="hero-spline-bg" id="heroSplineBg">
+        <div class="spline-loader" id="splineLoader">
+            
+        </div>
+        <canvas id="canvas3d"></canvas>
+    </div>
+
+    <!-- Layer 2: Gradient overlay for text readability -->
+    <div class="hero-overlay"></div>
+
+   <!-- Layer 3: Hero text content with bold typography -->
+<div class="hero-content">
+    <div class="hero-text" style="position: relative; width: 100%;">
+        <!-- Bold typography with outline effect - Left aligned -->
+        <h1 class="hero-title" style="text-align: left;">
+            <span class="outline-text" style="margin-left: -150px;">WE</span>
+            <span class="accent-text">BUILD</span>
+            <br>
+            <span>DIGITAL</span>
+            <span class="outline-text"  style="margin-left: 100px;">EMPIRES</span>
+        </h1>
+    </div>
+
+    <!-- Sub-copy on the right -->
+    <div class="hero__subcopy" id="hero-subcopy">
+        <p class="hero__tagline">
+            // DIGITAL PRESENCE THAT
+            <br>
+            SCALES YOUR BUSINESS
+        </p>
+        <p class="hero__desc">
+            WE ARE ATO CODERS – A FULL-SERVICE DIGITAL AGENCY
+            <br>
+            BUILDING WEBSITES, GOOGLE MAPS VISIBILITY,
+            <br>
+            AND PROFESSIONAL PHOTOGRAPHY FOR ETHIOPIAN BUSINESSES.
+        </p>
+    </div>
+</div>
+
+    <!-- Mobile: Spline stacks below text (hidden on desktop) -->
+    <div class="hero-spline-mobile" id="heroSplineMobile"></div>
+
+</section>
+
+    
+
+   <!-- ============================================
+     TRUSTED BY — Auto-Scrolling Company Logos
+     ============================================ -->
+<section class="trusted-section">
+    <div class="trusted-container">
+        
+        <!-- Section Label -->
+        <div class="trusted-label reveal">
+            <span class="label-dot"></span>
+            <span class="label-text">TRUSTED BY INNOVATORS</span>
+        </div>
+        
+        <!-- Marquee Container -->
+        <div class="marquee-container">
+            <div class="marquee-track" id="marqueeTrack">
+                <!-- First Set -->
+                <div class="marquee-item">
+                    <i class="fab fa-netflix"><br></i>
+                    <span>NETFLIX</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-google"><br></i>
+                    <span>GOOGLE</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fas fa-robot"><br></i>
+                    <span>CHATGPT</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fas fa-map-marked-alt"><br></i>
+                    <span>GOOGLE MAPS</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-microsoft"><br></i>
+                    <span>MICROSOFT</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-amazon"><br></i>
+                    <span>AMAZON</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-apple"><br></i>
+                    <span>APPLE</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-meta"><br  ></i>
+                    <span>META</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-twitter"><br></i>
+                    <span>X</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-linkedin"><br></i>
+                    <span>LINKEDIN</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-tiktok"><br></i>
+                    <span>TIKTOK</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-spotify"><br></i>
+                    <span>SPOTIFY</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-salesforce"><br></i>
+                    <span>SALESFORCE</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-adobe"><br ></i>
+                    <span>ADOBE</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fas fa-database"><br></i>
+                    <span>ORACLE</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-ibm"><br></i>
+                    <span>IBM</span>
+                </div>
+                <!-- Duplicate set for seamless loop -->
+                <div class="marquee-item">
+                    <i class="fab fa-netflix"><br></i>
+                    <span>NETFLIX</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-google"><br></i>
+                    <span>GOOGLE</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fas fa-robot"><br></i>
+                    <span>CHATGPT</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fas fa-map-marked-alt"><br></i>
+                    <span>GOOGLE MAPS</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-microsoft"><br></i>
+                    <span>MICROSOFT</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-amazon"><br></i>
+                    <span>AMAZON</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-apple"><br></i>
+                    <span>APPLE</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-meta"><br></i>
+                    <span>META</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-twitter"><br></i>
+                    <span>X</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-linkedin"><br></i>
+                    <span>LINKEDIN</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fab fa-tiktok"><br></i>
+                    <span>TIKTOK</span>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</section>
+    <!-- ============================================
+     SERVICES CAROUSEL — Outside Plus Corners
+     ============================================ -->
+    <section class="services-carousel" id="services">
+        <div class="services-carousel-inner">
+            <!-- Section Header -->
+            <div class="carousel-header">
+                <div class="header-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">WHAT WE DO</span>
+                </div>
+                <h2 class="header-heading reveal">OUR <em>SERVICES</em></h2>
+            </div>
+
+            <!-- Carousel Container -->
+            <div class="carousel-wrapper">
+                <!-- Left Navigation Button -->
+                <button class="carousel-nav-btn nav-prev" id="navPrev" aria-label="Previous services">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+
+                <!-- Cards Container -->
+                <div class="cards-scroll-container" id="cardsContainer">
+                    <div class="cards-track" id="cardsTrack">
+
+                        <!-- Card 1 - Building Website -->
+                        <div class="service-card-wrapper">
+                            <div class="service-card" data-index="0">
+                                <!-- Plus signs on OUTSIDE corners -->
+                                <div class="card-plus top-left">✚</div>
+                                <div class="card-plus top-right">✚</div>
+                                <div class="card-plus bottom-left">✚</div>
+                                <div class="card-plus bottom-right">✚</div>
+
+                                <div class="card-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+
+                                <div class="card-content">
+                                    <span class="card-number">(01)</span>
+                                    <h3 class="card-title">WEBSITE<br>DEVELOPMENT</h3>
+                                    <p class="card-description">Modern, responsive websites built for Ethiopian
+                                        businesses with fast loading times and mobile-first design.</p>
+                                    <div class="card-features">
+                                        <span>→ Responsive</span>
+                                        <span>→ Fast</span>
+                                        <span>→ Modern</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 - Google Maps Presence -->
+                        <div class="service-card-wrapper">
+                            <div class="service-card" data-index="1">
+                                <div class="card-plus top-left">✚</div>
+                                <div class="card-plus top-right">✚</div>
+                                <div class="card-plus bottom-left">✚</div>
+                                <div class="card-plus bottom-right">✚</div>
+
+                                <div class="card-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+
+                                <div class="card-content">
+                                    <span class="card-number">(02)</span>
+                                    <h3 class="card-title">GOOGLE MAPS<br>PRESENCE</h3>
+                                    <p class="card-description">Verified Google Business profiles that help customers
+                                        find your physical location and contact you easily.</p>
+                                    <div class="card-features">
+                                        <span>→ Verification</span>
+                                        <span>→ Reviews</span>
+                                        <span>→ Visibility</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 - Professional Photography -->
+                        <div class="service-card-wrapper">
+                            <div class="service-card" data-index="2">
+                                <div class="card-plus top-left">✚</div>
+                                <div class="card-plus top-right">✚</div>
+                                <div class="card-plus bottom-left">✚</div>
+                                <div class="card-plus bottom-right">✚</div>
+
+                                <div class="card-icon">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+
+                                <div class="card-content">
+                                    <span class="card-number">(03)</span>
+                                    <h3 class="card-title">PROFESSIONAL<br>PHOTOGRAPHY</h3>
+                                    <p class="card-description">High-quality product and business photography that
+                                        showcases your brand in the best light.</p>
+                                    <div class="card-features">
+                                        <span>→ Product</span>
+                                        <span>→ Business</span>
+                                        <span>→ Events</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 - Brand Identity -->
+                        <div class="service-card-wrapper">
+                            <div class="service-card" data-index="3">
+                                <div class="card-plus top-left">✚</div>
+                                <div class="card-plus top-right">✚</div>
+                                <div class="card-plus bottom-left">✚</div>
+                                <div class="card-plus bottom-right">✚</div>
+
+                                <div class="card-icon">
+                                    <i class="fas fa-paint-brush"></i>
+                                </div>
+
+                                <div class="card-content">
+                                    <span class="card-number">(04)</span>
+                                    <h3 class="card-title">BRAND<br>IDENTITY</h3>
+                                    <p class="card-description">Complete brand systems including logos, color palettes,
+                                        and typography that tell your story.</p>
+                                    <div class="card-features">
+                                        <span>→ Logo</span>
+                                        <span>→ Colors</span>
+                                        <span>→ Guidelines</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 - SEO Optimization -->
+                        <div class="service-card-wrapper">
+                            <div class="service-card" data-index="4">
+                                <div class="card-plus top-left">✚</div>
+                                <div class="card-plus top-right">✚</div>
+                                <div class="card-plus bottom-left">✚</div>
+                                <div class="card-plus bottom-right">✚</div>
+
+                                <div class="card-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+
+                                <div class="card-content">
+                                    <span class="card-number">(05)</span>
+                                    <h3 class="card-title">SEO<br>OPTIMIZATION</h3>
+                                    <p class="card-description">Get found faster with tailored SEO strategies that drive
+                                        organic traffic to your website.</p>
+                                    <div class="card-features">
+                                        <span>→ Keywords</span>
+                                        <span>→ Rankings</span>
+                                        <span>→ Analytics</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Navigation Button -->
+                <button class="carousel-nav-btn nav-next" id="navNext" aria-label="Next services">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Dots Indicator -->
+            <div class="carousel-dots" id="carouselDots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+                <span class="dot" data-index="5"></span>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================
+         CTA BAND
+         ============================================ -->
+    <section class="cta-band">
+        <div class="cta-band-inner">
+            <a href="contact.html" class="cta-go">
+                Get Started <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+    
+    <!-- ============================================
+         INFO BAND
+         ============================================ -->
+    <section class="info-band">
+        <div class="info-band-inner">
+            <div class="location-stamp">
+                <span class="dot"></span>
+                <span id="locationClock">ADDIS ABABA, --:--:-- --</span>
+            </div>
+            <p class="info-side-text">
+                We help <em>ambitious</em> businesses capture their next wave of growth with modern web development,
+                Google Maps visibility, and professional photography.
+            </p>
+        </div>
+    </section>
+    <!-- ============================================
+     ABOUT SECTION — Custom Clipped Shape
+     ============================================ -->
+<section class="about-section" id="about">
+    <div class="about-container">
+        
+        <!-- Section Header -->
+        <div class="about-header">
+            <div class="header-left">
+                <span class="star-animate">✱</span>
+                <span class="about-label">WHO WE ARE</span>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Telegram">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="about-grid">
+            <!-- Left Column - Text Content -->
+            <div class="about-text-content">
+                <h2 class="about-headline">
+                    <span class="headline-word">Crafting</span>
+                    <span class="headline-word accent">Digital</span>
+                    <span class="headline-word">Presence</span>
+                    <span class="headline-word">That</span>
+                    <span class="headline-word">Matters.</span>
+                </h2>
+
+                <div class="about-description">
+                    <p class="description-text">
+                        Based in Addis Ababa, Ato Coders is a close-knit team of developers, designers, and strategists. We partner with businesses across Ethiopia to build their digital presence from the ground up — websites that perform, listings that get found, and visuals that tell your story.
+                    </p>
+                    <p class="description-text">
+                        Every brand has a story, and we specialize in telling yours with clarity and impact. By blending creativity with strategy, we build digital solutions that resonate with your audience and drive real business growth.
+                    </p>
+                </div>
+
+                <!-- Stats -->
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Clipped Image with Notches -->
+<div class="about-image-wrapper">
+    <!-- Image Container with Custom Clip Path -->
+    <div class="clipped-image-container" id="clippedImageContainer">
+        
+        <!-- SVG Definition for Clip Path -->
+        <svg width="0" height="0" style="position: absolute;">
+            <defs>
+                <clipPath id="clip-inverted" clipPathUnits="objectBoundingBox">
+                    <path d="M0.0998072 1H0.422076H0.749756C0.767072 1 0.774207 0.961783 0.77561 0.942675V0.807325C0.777053 0.743631 0.791844 0.731953 0.799059 0.734076H0.969813C0.996268 0.730255 1.00088 0.693206 0.999875 0.675159V0.0700637C0.999875 0.0254777 0.985045 0.00477707 0.977629 0H0.902473C0.854975 0 0.890448 0.138535 0.850165 0.138535H0.0204424C0.00408849 0.142357 0 0.180467 0 0.199045V0.410828C0 0.449045 0.0136283 0.46603 0.0204424 0.469745H0.0523086C0.0696245 0.471019 0.0735527 0.497877 0.0733523 0.511146V0.915605C0.0723903 0.983121 0.090588 1 0.0998072 1Z"/>
+                </clipPath>
+            </defs>
+        </svg>
+        
+        <!-- Image with clip-path applied -->
+        <img 
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop" 
+            alt="Ato Coders team" 
+            class="clipped-image"
+            style="clip-path: url(#clip-inverted);"
+            id="clippedImage"
+        >
+        
+       
+        
+        <!-- Bottom Right Notch - Stats -->
+        <div class="notch bottom-right-notch">
+            <div class="notch-content">
+                <span class="notch-stat-number">100+</span>
+                <span class="notch-stat-label">BRANDS</span>
+            </div>
+        </div>
+        
+        <!-- Top Left Notch - Label -->
+        <div class="notch top-left-notch">
+            <div class="notch-content">
+                <span class="notch-mini-label">EST 2020</span>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="about-footer">
+            <button class="about-cta-btn" id="aboutCtaBtn">
+                LET'S COLLABORATE <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+<!-- ============================================
+     PRICING SECTION — 3 Plans with Featured Middle
+     ============================================ -->
+<section class="pricing-section" id="pricing">
+    <div class="pricing-container">
+        
+        <!-- Section Header -->
+        <div class="pricing-header">
+            <div class="pricing-badge">
+                <span class="badge-dot"></span>
+                <span class="badge-text">PRICING</span>
+            </div>
+            <h2 class="pricing-heading reveal">CHOOSE YOUR <em>PLAN</em></h2>
+            <p class="pricing-subhead reveal">Simple, transparent pricing for every business</p>
+        </div>
+
+        <!-- Pricing Cards Container -->
+        <div class="pricing-row">
+            
+            <!-- Card 1: Essential (Left - Inclined) -->
+            <div class="pricing-card pricing-card-left reveal">
+                <div class="pricing-card-inner">
+                    <div class="pricing-card-content">
+                        <span class="pricing-number">(01)</span>
+                        <h3 class="pricing-title">ESSENTIAL</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount">19</span>
+                            <span class="price-period">/mo</span>
+                        </div>
+                        <p class="pricing-description">Perfect for startups & small businesses</p>
+                        
+                        <ul class="pricing-features">
+                            <li><span class="feature-check">✓</span> 1 Website</li>
+                            <li><span class="feature-check">✓</span> 5 Pages</li>
+                            <li><span class="feature-check">✓</span> Basic SEO</li>
+                            <li><span class="feature-check">✓</span> Email Support</li>
+                        </ul>
+                        
+                        <button class="pricing-btn essential-btn">
+                            Get Started <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Professional (Middle - Fully Accent Color / Featured) -->
+            <div class="pricing-card pricing-card-center featured-card reveal">
+                <div class="best-deal-badge">BEST VALUE</div>
+                <div class="pricing-card-inner">
+                    <div class="pricing-card-content">
+                        <span class="pricing-number">(02)</span>
+                        <h3 class="pricing-title">PROFESSIONAL</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount">49</span>
+                            <span class="price-period">/mo</span>
+                        </div>
+                        <p class="pricing-description">For growing businesses ready to scale</p>
+                        
+                        <ul class="pricing-features">
+                            <li><span class="feature-check">✓</span> 3 Websites</li>
+                            <li><span class="feature-check">✓</span> 15 Pages</li>
+                            <li><span class="feature-check">✓</span> Advanced SEO</li>
+                            <li><span class="feature-check">✓</span> Priority Support</li>
+                            <li><span class="feature-check">✓</span> Google Maps Setup</li>
+                            <li><span class="feature-check">✓</span> 5 Photos</li>
+                        </ul>
+                        
+                        <button class="pricing-btn professional-btn">
+                            Go Pro <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Enterprise (Right - Inclined) -->
+            <div class="pricing-card pricing-card-right reveal">
+                <div class="pricing-card-inner">
+                    <div class="pricing-card-content">
+                        <span class="pricing-number">(03)</span>
+                        <h3 class="pricing-title">ENTERPRISE</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount">99</span>
+                            <span class="price-period">/mo</span>
+                        </div>
+                        <p class="pricing-description">For large organizations</p>
+                        
+                        <ul class="pricing-features">
+                            <li><span class="feature-check">✓</span> Unlimited Websites</li>
+                            <li><span class="feature-check">✓</span> Unlimited Pages</li>
+                            <li><span class="feature-check">✓</span> Premium SEO</li>
+                            <li><span class="feature-check">✓</span> 24/7 Phone Support</li>
+                            <li><span class="feature-check">✓</span> Google Maps Premium</li>
+                            <li><span class="feature-check">✓</span> 20+ Photos</li>
+                            <li><span class="feature-check">✓</span> Video Production</li>
+                        </ul>
+                        
+                        <button class="pricing-btn enterprise-btn">
+                            Contact Us <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- Custom Enterprise Solution - Minimal -->
+<div class="pricing-enterprise reveal">
+    <div class="enterprise-divider">
+        <span class="divider-line"></span>
+        <span class="divider-plus">✚</span>
+        <span class="divider-line"></span>
+    </div>
+    
+    <div class="enterprise-wrapper">
+        <p class="enterprise-question">Need a custom solution?</p>
+        <a href="#contact" class="enterprise-link">
+            Contact us for enterprise pricing
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+    
+    <div class="enterprise-divider">
+        <span class="divider-line"></span>
+        <span class="divider-plus">✚</span>
+        <span class="divider-line"></span>
+    </div>
+</div>
+    </div>
+</section>
+
+
+<!-- ============================================
+     TEAM SECTION — Card Design Like Reference
+     ============================================ -->
+<section class="team-section" id="team">
+    <div class="team-section-inner">
+        <!-- Section Header with border top like reference -->
+        <div class="team-header">
+            <span class="team-caption">OUR TEAM</span>
+            <div class="team-header-content">
+                <div class="team-header-left">
+                    <h2 class="team-heading reveal">OUR DREAM <em>TEAM</em></h2>
+                </div>
+                <div class="team-header-right reveal">
+                    <p class="team-description">
+                         We're a close-knit team of developers, designers, and strategists based in Gondar, Ethiopia. With a passion for technology and creativity, we collaborate to build digital solutions that help Ethiopian businesses thrive online. From crafting responsive websites to optimizing Google Maps presence and capturing stunning visuals, we're
+                passionate about building digital presence for Ethiopian businesses.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Grid - 4 members with rectangle images -->
+        <div class="team-grid">
+            <!-- Team Member 1 - Abel Berhane -->
+            <div class="team-card group reveal">
+                <div class="team-card-inner">
+                    <div class="team-image-wrapper">
+                        <img class="team-image" src="ab.jpg" alt="Abel Berhane" loading="lazy">
+                        <!-- Social links overlay on hover -->
+                        <div class="team-social">
+                            <a href="#" class="team-social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="team-social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="team-social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <div class="team-info-header">
+                            <h3 class="team-name">Abel Berhane</h3>
+                            <span class="team-number">_01</span>
+                        </div>
+                        <div class="team-role-wrapper">
+                            <span class="team-role">Lead Developer</span>
+                            <a href="#" class="team-link">
+                                LinkedIn
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 - Dawit Weldu -->
+            <div class="team-card group reveal">
+                <div class="team-card-inner">
+                    <div class="team-image-wrapper">
+                        <img class="team-image" src="dw.jpg" alt="Dawit Weldu" loading="lazy">
+                        <div class="team-social">
+                            <a href="#" class="team-social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="team-social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="team-social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <div class="team-info-header">
+                            <h3 class="team-name">Dawit Weldu</h3>
+                            <span class="team-number">_02</span>
+                        </div>
+                        <div class="team-role-wrapper">
+                            <span class="team-role">UI/UX Designer</span>
+                            <a href="#" class="team-link">
+                                LinkedIn
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 - Wubet Getahun -->
+            <div class="team-card group reveal">
+                <div class="team-card-inner">
+                    <div class="team-image-wrapper">
+                        <img class="team-image" src="wg.jpg" alt="Wubet Getahun" loading="lazy">
+                        <div class="team-social">
+                            <a href="#" class="team-social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="team-social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="team-social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <div class="team-info-header">
+                            <h3 class="team-name">Wubet Getahun</h3>
+                            <span class="team-number">_03</span>
+                        </div>
+                        <div class="team-role-wrapper">
+                            <span class="team-role">Frontend Developer</span>
+                            <a href="#" class="team-link">
+                                LinkedIn
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 4 - Nathnaeal Banteamlack -->
+            <div class="team-card group reveal">
+                <div class="team-card-inner">
+                    <div class="team-image-wrapper">
+                        <img class="team-image" src="nb.jpg" alt="Nathnaeal Banteamlack" loading="lazy">
+                        <div class="team-social">
+                            <a href="#" class="team-social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="team-social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="team-social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <div class="team-info-header">
+                            <h3 class="team-name">Nathnaeal Banteamlack</h3>
+                            <span class="team-number">_04</span>
+                        </div>
+                        <div class="team-role-wrapper">
+                            <span class="team-role">Backend Developer</span>
+                            <a href="#" class="team-link">
+                                LinkedIn
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ============================================
+     PREVIOUS WORKS — Portfolio Showcase
+     ============================================ -->
+<section class="works-section" id="works">
+    <div class="works-container">
+        
+        <!-- Section Header -->
+        <div class="works-header">
+            <div class="works-badge">
+                <span class="badge-dot"></span>
+                <span class="badge-text">PORTFOLIO</span>
+            </div>
+            <h2 class="works-heading reveal">PREVIOUS <em>WORKS</em></h2>
+            <p class="works-subhead reveal">A selection of projects we've delivered for our clients</p>
+        </div>
+
+        <!-- Works Grid -->
+        <div class="works-grid">
+            
+            <!-- Work Item 1 - E-commerce Website -->
+            <div class="work-card reveal">
+                <div class="work-image-wrapper">
+                    <img src="co.png" alt="E-commerce Website" class="work-image">
+                    <div class="work-overlay">
+                        <div class="work-overlay-content">
+                            <span class="work-category">E-COMMERCE</span>
+                            <h3 class="work-title">Ethiopian Coffee Shop</h3>
+                            <p class="work-description">Online store with payment integration and inventory management</p>
+                            <div class="work-tags">
+                                <span class="work-tag">Shopify</span>
+                                <span class="work-tag">Payment</span>
+                                <span class="work-tag">Mobile</span>
+                            </div>
+                            <a href="#" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-info">
+                    <span class="work-number">(01)</span>
+                    <h4 class="work-name">Coffee Exporters</h4>
+                    <span class="work-year">2025</span>
+                </div>
+            </div>
+
+            <!-- Work Item 2 - Google Maps Integration -->
+            <div class="work-card reveal">
+                <div class="work-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1577086664693-894d8405334a?w=600&auto=format&fit=crop" alt="Google Maps Integration" class="work-image">
+                    <div class="work-overlay">
+                        <div class="work-overlay-content">
+                            <span class="work-category">LOCAL SEO</span>
+                            <h3 class="work-title">Addis Hotel & Spa</h3>
+                            <p class="work-description">Complete Google Maps optimization with photo management and review strategy</p>
+                            <div class="work-tags">
+                                <span class="work-tag">Maps</span>
+                                <span class="work-tag">SEO</span>
+                                <span class="work-tag">Local</span>
+                            </div>
+                            <a href="#" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-info">
+                    <span class="work-number">(02)</span>
+                    <h4 class="work-name">Grand Hotel</h4>
+                    <span class="work-year">2024</span>
+                </div>
+            </div>
+
+            <!-- Work Item 3 - Photography Portfolio -->
+            <div class="work-card reveal">
+                <div class="work-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1552168324-d612d77725e3?w=600&auto=format&fit=crop" alt="Photography Portfolio" class="work-image">
+                    <div class="work-overlay">
+                        <div class="work-overlay-content">
+                            <span class="work-category">PHOTOGRAPHY</span>
+                            <h3 class="work-title">Ethiopian Heritage Collection</h3>
+                            <p class="work-description">Professional product and cultural photography for a tourism brand</p>
+                            <div class="work-tags">
+                                <span class="work-tag">Product</span>
+                                <span class="work-tag">Cultural</span>
+                                <span class="work-tag">Marketing</span>
+                            </div>
+                            <a href="#" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-info">
+                    <span class="work-number">(03)</span>
+                    <h4 class="work-name">EthioTourism</h4>
+                    <span class="work-year">2024</span>
+                </div>
+            </div>
+
+           
+
+            
+
+            
+        </div>
+
+        <!-- View All Link -->
+        <div class="works-footer reveal">
+            <a href="work.html" class="works-all-link">
+                View All Projects <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+    <!-- ============================================
+     CONTACT SECTION — With Contact Card Component
+     ============================================ -->
+    <section class="contact-section" id="contact">
+        <div class="contact-section-inner">
+            <!-- Contact Card Container -->
+            <div class="contact-card">
+                <!-- Decorative Plus Icons (4 corners) -->
+                <div class="contact-plus top-left">✚</div>
+                <div class="contact-plus top-right">✚</div>
+                <div class="contact-plus bottom-left">✚</div>
+                <div class="contact-plus bottom-right">✚</div>
+
+                <!-- Left Content Area -->
+                <div class="contact-content">
+                    <div class="contact-text-content">
+                        <h2 class="contact-heading">CONTACT WITH US</h2>
+                        <p class="contact-description">If you have any questions regarding our Services or need help,
+                            please fill out the form here. We do our best to respond within 1 business day.</p>
+
+                        <!-- Contact Info Grid -->
+                        <div class="contact-info-grid">
+                            <!-- Email -->
+                            <div class="contact-info-item">
+                                <div class="contact-icon-box">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="contact-info-label">Email</p>
+                                    <p class="contact-info-value">hello@atocoders.com</p>
+                                </div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="contact-info-item">
+                                <div class="contact-icon-box">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <p class="contact-info-label">Phone</p>
+                                    <p class="contact-info-value">+251 91 234 5678</p>
+                                </div>
+                            </div>
+
+                            <!-- Address (spans 2 columns on desktop) -->
+                            <div class="contact-info-item address-item">
+                                <div class="contact-icon-box">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <p class="contact-info-label">Address</p>
+                                    <p class="contact-info-value">Bole Road, Addis Ababa, Ethiopia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form Area -->
+                <div class="contact-form-area">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">NAME</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">EMAIL</label>
+                            <input type="email" id="email" name="email" class="form-input"
+                                placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">PHONE</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter your phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">MESSAGE</label>
+                            <textarea id="message" name="message" class="form-textarea"
+                                placeholder="Tell us about your project" rows="4" required></textarea>
+                        </div>
+
+                        <button type="submit" class="form-submit-btn">
+                            Send Message <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+
+                    <!-- Form success message (hidden by default) -->
+                    <div class="form-success hidden" id="formSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Thank you! We'll get back to you within 1 business day.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Maps Presence Badge -->
+            <div class="google-maps-badge">
+                <span class="pulse-dot"></span>
+                <span class="badge-text">Find us on Google Maps</span>
+            </div>
+        </div>
+    </section>
+<!-- ============================================
+     FOOTER — Ato Coders
+     ============================================ -->
+<footer class="footer">
+    <div class="footer-inner">
+        <!-- Main Footer Content -->
+        <div class="footer-grid">
+            
+            <!-- Column 1: Company Info -->
+            <div class="footer-col">
+                <div class="footer-logo">Ato Coders</div>
+                <p class="footer-tagline">Digital presence for local businesses. Websites, Google Maps, photo & video.</p>
+            </div>
+            
+            <!-- Column 2: Pages -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Pages</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3: Packages -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Packages</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Essential</a></li>
+                    <li><a href="#">Professional</a></li>
+                    <li><a href="#">Complete Digital</a></li>
+                    <li><a href="#">Google Maps</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 4: Connect -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Connect</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-phone-alt"></i> +251 987 654 321</li>
+                    <li><i class="fas fa-envelope"></i> hello@atocoders.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Addis Ababa / remote</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2025 Ato Coders. Built for local business, powered by blue.</p>
+            
+            <!-- Social Icons (Optional - you can keep or remove) -->
+            <div class="footer-socials">
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- ============================================
+         VANILLA JS
+         ============================================ -->
+    <script>
+        /* ---------- NAVBAR SCROLL ---------- */
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 40);
+        }, { passive: true });
+
+        /* ---------- MOBILE MENU ---------- */
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        const menuIcon = document.getElementById('menuIcon');
+        let menuOpen = false;
+
+        mobileMenuBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            mobileNav.classList.toggle('active', menuOpen);
+            menuIcon.className = menuOpen ? 'fas fa-times' : 'fas fa-bars';
+        });
+
+        function closeMobileNav() {
+            menuOpen = false;
+            mobileNav.classList.remove('active');
+            menuIcon.className = 'fas fa-bars';
+        }
+
+        /* ---------- LIVE CLOCK ---------- */
+        function updateClock() {
+            const now = new Date();
+            const h = now.getHours();
+            const m = String(now.getMinutes()).padStart(2, '0');
+            const s = String(now.getSeconds()).padStart(2, '0');
+            const ampm = h >= 12 ? 'PM' : 'AM';
+            const h12 = h % 12 || 12;
+            const time = `${String(h12).padStart(2, '0')}:${m}:${s} ${ampm}`;
+            document.getElementById('locationClock').textContent = `ADDIS ABABA, ${time}`;
+        }
+
+        updateClock();
+        setInterval(updateClock, 1000);
+
+        /* ---------- SCROLL REVEAL ---------- */
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        /* ---------- CURSOR GLOW (Desktop) ---------- */
+        const cursorGlow = document.getElementById('cursorGlow');
+
+        if (window.matchMedia('(hover: hover)').matches && cursorGlow) {
+            document.addEventListener('mousemove', (e) => {
+                cursorGlow.style.left = e.clientX + 'px';
+                cursorGlow.style.top = e.clientY + 'px';
+                cursorGlow.classList.add('active');
+            });
+
+            document.addEventListener('mouseleave', () => {
+                cursorGlow.classList.remove('active');
+            });
+        }
+    </script>
+
+   <script type="module">
+import { Application } from 'https://esm.sh/@splinetool/runtime';
+
+const canvas = document.getElementById('canvas3d');
+const loader = document.getElementById('splineLoader');
+
+const app = new Application(canvas);
+
+app.load('https://prod.spline.design/QtH5wu4YC6mUTD5S/scene.splinecode')
+.then(() => {
+    if (loader) {
+        loader.classList.add('hidden');
+        canvas.classList.add('loaded');
+    }
+
+    const headObject = app.findObjectById('3bf648bf-4bd4-4f9f-9bf1-288da3ec4f43f');
+
+    if (!headObject) {
+        console.error("Head object not found");
+        return;
+    }
+
+    // Store original rotation
+    const originalRot = {
+        x: headObject.rotation.x,
+        y: headObject.rotation.y,
+        z: headObject.rotation.z
+    };
+
+    // Rotation limits (in radians)
+    const LIMITS = {
+        yaw: Math.PI * 0.6,   // Left/right (0.8 was too extreme)
+        pitch: Math.PI * 0.4   // Up/down (reduced for natural look)
+    };
+
+    // Smoothing factor (0.1 = smooth, 0.3 = more responsive)
+    const SMOOTHING = 0.15;
+    
+    // Deadzone (small area where no rotation occurs)
+    const DEADZONE = 0.02;
+    
+    // Easing curve for natural feel
+    const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+
+    let targetRot = { x: 0, y: 0 };
+    let currentRot = { x: 0, y: 0 };
+    let isMouseInCanvas = true;
+    let returnTimeout;
+
+    // Mouse move handler
+    function handleMouseMove(e) {
+        const rect = canvas.getBoundingClientRect();
+        
+        // Calculate normalized cursor position (-1 to 1)
+        let x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+        let y = ((e.clientY - rect.top) / rect.height) * 2 - 1;
+        
+        // Clamp values
+        x = Math.max(-1, Math.min(1, x));
+        y = Math.max(-1, Math.min(1, y));
+        
+        // Apply deadzone
+        if (Math.abs(x) < DEADZONE) x = 0;
+        if (Math.abs(y) < DEADZONE) y = 0;
+        
+        // Apply easing for natural feel near center
+        const easedX = Math.sign(x) * easeOutCubic(Math.abs(x));
+        const easedY = Math.sign(y) * easeOutCubic(Math.abs(y));
+        
+        // Calculate target rotation (FIXED: no inversion needed)
+        targetRot.y = -easedX * LIMITS.yaw;  // Negative for correct left/right
+        targetRot.x = easedY * LIMITS.pitch;  // Positive = down, Negative = up
+        
+        isMouseInCanvas = true;
+        
+        // Clear return timeout if mouse is in canvas
+        if (returnTimeout) {
+            clearTimeout(returnTimeout);
+            returnTimeout = null;
+        }
+    }
+
+    // Mouse leave handler
+    function handleMouseLeave() {
+        isMouseInCanvas = false;
+        
+        // Smooth return to center after a short delay
+        returnTimeout = setTimeout(() => {
+            targetRot = { x: 0, y: 0 };
+        }, 100);
+    }
+
+    // Add event listeners
+    canvas.addEventListener('mousemove', handleMouseMove);
+    canvas.addEventListener('mouseleave', handleMouseLeave);
+
+    // Animation loop
+    function animate() {
+        // Smooth interpolation
+        currentRot.x += (targetRot.x - currentRot.x) * SMOOTHING;
+        currentRot.y += (targetRot.y - currentRot.y) * SMOOTHING;
+        
+        // Apply rotation relative to original
+        headObject.rotation.x = originalRot.x + currentRot.x;
+        headObject.rotation.y = originalRot.y + currentRot.y;
+        headObject.rotation.z = originalRot.z; // Keep original Z rotation
+        
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    // Cleanup function (optional, call when component unmounts)
+    window.cleanupHeadTracking = () => {
+        canvas.removeEventListener('mousemove', handleMouseMove);
+        canvas.removeEventListener('mouseleave', handleMouseLeave);
+        if (returnTimeout) {
+            clearTimeout(returnTimeout);
+        }
+    };
+
+})
+.catch((err) => {
+    console.error('Spline load failed:', err);
+});
+
+        /* ---------- CONTACT FORM HANDLING ---------- */
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                // Get form data
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    message: document.getElementById('message').value
+                };
+
+                // Here you would typically send the data to your backend
+                console.log('Form submitted:', formData);
+
+                // Show success message
+                contactForm.style.display = 'none';
+                formSuccess.classList.remove('hidden');
+
+                // Optional: Reset form after 5 seconds
+                setTimeout(() => {
+                    contactForm.reset();
+                    contactForm.style.display = 'flex';
+                    formSuccess.classList.add('hidden');
+                }, 5000);
+            });
+        }
+
+        /* Update mobile nav to include contact section */
+        function closeMobileNav() {
+            menuOpen = false;
+            mobileNav.classList.remove('active');
+            menuIcon.className = 'fas fa-bars';
+        }
+
+        // Add smooth scroll for contact section
+        document.querySelectorAll('a[href^="#contact"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        /* ---------- TEAM SECTION INTERACTIONS ---------- */
+        // Optional: Add hover effect for social icons
+        const teamCards = document.querySelectorAll('.team-card');
+
+        teamCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                // You can add any additional hover effects here
+            });
+
+            card.addEventListener('mouseleave', () => {
+                // Reset any effects here
+            });
+        });
+
+
+
+
+/* ---------- SERVICES CAROUSEL WITH BUTTONS ---------- */
+class ServicesCarousel {
+    constructor() {
+        this.container = document.getElementById('cardsContainer');
+        this.track = document.getElementById('cardsTrack');
+        this.prevBtn = document.getElementById('navPrev');
+        this.nextBtn = document.getElementById('navNext');
+        this.dots = document.querySelectorAll('.dot');
+        this.cards = document.querySelectorAll('.service-card-wrapper');
+
+        this.currentIndex = 0;
+        this.cardWidth = 0;
+        this.gap = 40; // matches gap in CSS
+        this.visibleCards = this.getVisibleCards();
+        this.resizeTimeout = null;
+
+        // Only initialize if all required elements exist
+        if (!this.container || !this.track || this.cards.length === 0) {
+            console.warn('Carousel elements not found');
+            return;
+        }
+
+        // Wait a tiny bit for DOM to fully render
+        setTimeout(() => {
+            this.init();
+        }, 100);
+    }
+
+    getVisibleCards() {
+        if (window.innerWidth >= 1024) return 3;
+        if (window.innerWidth >= 768) return 2;
+        return 1;
+    }
+
+    init() {
+        console.log('Initializing carousel');
+        this.updateCardWidth();
+        this.updateButtons();
+        this.setupEventListeners();
+        this.setupDots();
+        
+        // Set initial dot
+        this.updateDots();
+    }
+
+    updateCardWidth() {
+        if (this.cards.length > 0) {
+            // Get the first card and its computed width
+            const firstCard = this.cards[0];
+            const cardStyle = window.getComputedStyle(firstCard);
+            this.cardWidth = firstCard.offsetWidth;
+            
+            console.log('Card width:', this.cardWidth);
+        }
+    }
+
+    setupEventListeners() {
+        // Next button
+        if (this.nextBtn) {
+            this.nextBtn.addEventListener('click', () => {
+                this.scrollToIndex(this.currentIndex + 1);
+            });
+        }
+
+        // Previous button
+        if (this.prevBtn) {
+            this.prevBtn.addEventListener('click', () => {
+                this.scrollToIndex(this.currentIndex - 1);
+            });
+        }
+
+        // Scroll event to update dots and buttons
+        this.container.addEventListener('scroll', () => {
+            this.updateCurrentIndex();
+            this.updateDots();
+            this.updateButtons();
+        });
+
+        // Window resize with debounce
+        window.addEventListener('resize', () => {
+            clearTimeout(this.resizeTimeout);
+            this.resizeTimeout = setTimeout(() => {
+                this.visibleCards = this.getVisibleCards();
+                this.updateCardWidth();
+                this.updateButtons();
+                this.updateCurrentIndex();
+                this.updateDots();
+            }, 150);
+        });
+
+        // Touch events for mobile
+        this.container.addEventListener('touchend', () => {
+            setTimeout(() => {
+                this.updateCurrentIndex();
+                this.updateDots();
+                this.updateButtons();
+            }, 50);
+        });
+    }
+
+    setupDots() {
+        this.dots.forEach((dot, index) => {
+            dot.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.scrollToIndex(index);
+            });
+            
+            // Add cursor style
+            dot.style.cursor = 'pointer';
+        });
+    }
+
+    scrollToIndex(index) {
+        const maxIndex = Math.max(0, this.cards.length - this.visibleCards);
+        
+        // Clamp index between 0 and maxIndex
+        index = Math.max(0, Math.min(index, maxIndex));
+
+        if (index === this.currentIndex) return;
+
+        this.currentIndex = index;
+
+        // Calculate scroll position
+        const scrollPosition = index * (this.cardWidth + this.gap);
+
+        // Smooth scroll
+        this.container.scrollTo({
+            left: scrollPosition,
+            behavior: 'smooth'
+        });
+
+        // Update UI
+        setTimeout(() => {
+            this.updateDots();
+            this.updateButtons();
+        }, 50);
+    }
+
+    updateCurrentIndex() {
+        const scrollLeft = this.container.scrollLeft;
+        const approximateIndex = Math.round(scrollLeft / (this.cardWidth + this.gap));
+        
+        // Clamp between 0 and max
+        const maxIndex = this.cards.length - this.visibleCards;
+        this.currentIndex = Math.max(0, Math.min(approximateIndex, maxIndex));
+    }
+
+    updateDots() {
+        this.dots.forEach((dot, index) => {
+            if (index === this.currentIndex) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    updateButtons() {
+        if (!this.prevBtn || !this.nextBtn) return;
+
+        const maxIndex = this.cards.length - this.visibleCards;
+
+        // Disable prev button at start
+        if (this.currentIndex <= 0) {
+            this.prevBtn.disabled = true;
+            this.prevBtn.style.opacity = '0.3';
+            this.prevBtn.style.cursor = 'not-allowed';
+        } else {
+            this.prevBtn.disabled = false;
+            this.prevBtn.style.opacity = '1';
+            this.prevBtn.style.cursor = 'pointer';
+        }
+
+        // Disable next button at end
+        if (this.currentIndex >= maxIndex) {
+            this.nextBtn.disabled = true;
+            this.nextBtn.style.opacity = '0.3';
+            this.nextBtn.style.cursor = 'not-allowed';
+        } else {
+            this.nextBtn.disabled = false;
+            this.nextBtn.style.opacity = '1';
+            this.nextBtn.style.cursor = 'pointer';
+        }
+    }
+}
+
+// Initialize carousel when DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Small delay to ensure all elements are rendered
+    setTimeout(() => {
+        window.carousel = new ServicesCarousel();
+    }, 200);
+});
+
+// Also initialize if DOM is already loaded
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(() => {
+        window.carousel = new ServicesCarousel();
+    }, 200);
+}
+
+
+
+
+
+
+// Micro Dot Grid - Excludes Navbar
+class MicroDotGrid {
+    constructor() {
+        this.container = document.getElementById('dotGrid');
+        this.navbar = document.querySelector('.navbar'); // Your navbar element
+        this.dots = [];
+        this.dotSize = 3;
+        this.gridSize = 25; // Tighter grid for more dots
+        this.interactionRadius = 60; // Smaller radius for precision
+        this.mouseX = -1000;
+        this.mouseY = -1000;
+        
+        // Only initialize if container exists
+        if (this.container) {
+            this.init();
+        }
+    }
+    
+    init() {
+        this.createDots();
+        
+        // Track mouse movement
+        document.addEventListener('mousemove', (e) => {
+            this.mouseX = e.clientX;
+            this.mouseY = e.clientY;
+        });
+        
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            this.resetDots();
+        });
+        
+        // Animation loop
+        this.animate();
+    }
+    
+    isInNavbar(x, y) {
+        if (!this.navbar) return false;
+        
+        const navbarRect = this.navbar.getBoundingClientRect();
+        const heroRect = this.container.getBoundingClientRect();
+        
+        // Check if dot position (relative to hero) falls within navbar area
+        const absoluteY = heroRect.top + y;
+        
+        return (absoluteY >= navbarRect.top && 
+                absoluteY <= navbarRect.bottom &&
+                x >= navbarRect.left && 
+                x <= navbarRect.right);
+    }
+    
+    createDots() {
+        const heroRect = this.container.getBoundingClientRect();
+        const width = heroRect.width;
+        const height = heroRect.height;
+        
+        // Calculate dots needed - only within hero bounds
+        const cols = Math.ceil(width / this.gridSize) + 1;
+        const rows = Math.ceil(height / this.gridSize) + 1;
+        
+        // Clear existing dots
+        this.container.innerHTML = '';
+        this.dots = [];
+        
+        // Create new dots only within hero area
+        for (let row = 0; row < rows; row++) {
+            for (let col = 0; col < cols; col++) {
+                const dotX = col * this.gridSize;
+                const dotY = row * this.gridSize;
+                
+                // Skip if dot would be in navbar area
+                if (this.isInNavbar(dotX, dotY)) {
+                    continue;
+                }
+                
+                const dot = document.createElement('div');
+                dot.className = 'grid-dot';
+                
+                dot.style.left = dotX + 'px';
+                dot.style.top = dotY + 'px';
+                
+                // Store position
+                dot.dataset.x = dotX;
+                dot.dataset.y = dotY;
+                
+                this.container.appendChild(dot);
+                this.dots.push(dot);
+            }
+        }
+        
+        console.log(`Created ${this.dots.length} micro dots`); // Debug
+    }
+    
+    updateDots() {
+        const heroRect = this.container.getBoundingClientRect();
+        
+        this.dots.forEach(dot => {
+            const dotX = heroRect.left + parseFloat(dot.dataset.x);
+            const dotY = heroRect.top + parseFloat(dot.dataset.y);
+            
+            // Calculate distance from mouse
+            const distance = Math.sqrt(
+                Math.pow(this.mouseX - dotX, 2) + 
+                Math.pow(this.mouseY - dotY, 2)
+            );
+            
+            // Activate dot if within radius
+            if (distance < this.interactionRadius) {
+                const intensity = 1 - (distance / this.interactionRadius);
+                // Bright white with intensity
+                dot.style.backgroundColor = `rgba(255, 255, 255, ${intensity})`;
+                dot.style.transform = `translate(-50%, -50%) scale(${1 + intensity * 0.8})`;
+                dot.style.boxShadow = `0 0 ${6 * intensity}px rgba(255, 255, 255, ${intensity * 0.8})`;
+                dot.dataset.active = 'true';
+            } else {
+                // Reset to subtle gray
+                dot.style.backgroundColor = 'rgba(128, 128, 128, 0.15)';
+                dot.style.transform = 'translate(-50%, -50%) scale(1)';
+                dot.style.boxShadow = 'none';
+                dot.dataset.active = 'false';
+            }
+        });
+    }
+    
+    resetDots() {
+        this.createDots();
+    }
+    
+    animate() {
+        this.updateDots();
+        requestAnimationFrame(() => this.animate());
+    }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    new MicroDotGrid();
+});
+
+// Also reinitialize on scroll in case navbar height changes
+window.addEventListener('scroll', () => {
+    // Small delay to let navbar settle
+    setTimeout(() => {
+        if (window.dotGrid) {
+            window.dotGrid.resetDots();
+        }
+    }, 100);
+});
+
+
+/* ---------- AUTO-SCROLLING LOGOS ---------- */
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Adjust animation speed based on screen width
+    const marqueeTrack = document.getElementById('marqueeTrack');
+    
+    if (marqueeTrack) {
+        function adjustSpeed() {
+            const width = window.innerWidth;
+            let duration = 40; // default seconds
+            
+            if (width < 480) {
+                duration = 25;
+            } else if (width < 768) {
+                duration = 30;
+            } else if (width < 1024) {
+                duration = 35;
+            }
+            
+            marqueeTrack.style.animation = `scroll ${duration}s linear infinite`;
+        }
+        
+        // Initial adjustment
+        adjustSpeed();
+        
+        // Adjust on resize
+        window.addEventListener('resize', adjustSpeed);
+    }
+    
+    // Optional: Add click event to items (for analytics or linking)
+    const marqueeItems = document.querySelectorAll('.marquee-item');
+    marqueeItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const brand = this.querySelector('span')?.textContent || 'Unknown';
+            console.log(`Clicked on: ${brand}`);
+            // You can add custom behavior here
+        });
+    });
+});
+
+
+/* ---------- ABOUT SECTION INTERACTIONS ---------- */
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Image zoom on hover
+    const imageContainer = document.getElementById('clippedImageContainer');
+    const clippedImage = document.getElementById('clippedImage');
+    
+    if (imageContainer && clippedImage) {
+        imageContainer.addEventListener('mouseenter', () => {
+            clippedImage.style.transform = 'scale(1.08)';
+        });
+        
+        imageContainer.addEventListener('mouseleave', () => {
+            clippedImage.style.transform = 'scale(1)';
+        });
+    }
+    
+    // CTA Button click
+    const aboutCtaBtn = document.getElementById('aboutCtaBtn');
+    if (aboutCtaBtn) {
+        aboutCtaBtn.addEventListener('click', function() {
+            // Add click animation
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 150);
+            
+            // Scroll to contact
+            setTimeout(() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 300);
+        });
+    }
+    
+    // Animated counters for stats
+    function animateCounter(element, start, end, duration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const currentValue = Math.floor(progress * (end - start) + start);
+            element.textContent = currentValue + (element.dataset.suffix || '');
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            } else {
+                element.textContent = end + (element.dataset.suffix || '');
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
+
+    // Trigger counters on view
+    const statNumbers = document.querySelectorAll('.stat-number, .notch-stat-number');
+    const statObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                const text = element.textContent;
+                const number = parseInt(text.replace(/[^0-9]/g, ''));
+                if (!isNaN(number) && !element.classList.contains('animated')) {
+                    element.classList.add('animated');
+                    element.dataset.suffix = text.replace(/[0-9]/g, '');
+                    element.textContent = '0';
+                    animateCounter(element, 0, number, 2000);
+                }
+            }
+        });
+    }, { threshold: 0.5 });
+
+    statNumbers.forEach(el => statObserver.observe(el));
+
+    // Word reveal animation
+    const headlineWords = document.querySelectorAll('.headline-word');
+    const wordObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 100);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    headlineWords.forEach((word) => {
+        word.style.opacity = '0';
+        word.style.transform = 'translateY(20px)';
+        word.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        wordObserver.observe(word);
+    });
+
+    // Notch hover effects
+    const notches = document.querySelectorAll('.notch');
+    notches.forEach(notch => {
+        notch.addEventListener('mouseenter', () => {
+            notch.style.backgroundColor = 'rgba(26, 26, 26, 0.95)';
+            notch.style.borderColor = 'var(--accent)';
+        });
+        
+        notch.addEventListener('mouseleave', () => {
+            notch.style.backgroundColor = 'var(--bg-primary)';
+            notch.style.borderColor = 'var(--border-default)';
+        });
+    });
+});
+    </script>
+
+</body>
+
+</html>
