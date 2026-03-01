@@ -5,7 +5,6 @@
     width: 100%;
     padding: var(--space-2xl) 60px;
     background: var(--bg-primary);
-    border-top: 1px solid var(--border-default);
 }
 
 .team-section-inner {
@@ -15,15 +14,16 @@
 
 /* Team Header with border top */
 .team-header {
-    border-top: 1px solid var(--border-default);
     padding-top: 30px;
     margin-bottom: 60px;
+        text-align: center;
 }
 
 .team-caption {
     display: block;
     font-size: 12px;
     font-weight: 500;
+    align-items: center;
     color: var(--text-muted);
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -44,8 +44,9 @@
 }
 
 .team-heading {
-    font-size: clamp(32px, 4vw, 48px);
-    font-weight: 700;
+    font-size: clamp(48px, 8vw, 96px);
+    font-weight: 900;
+
     letter-spacing: -0.02em;
     color: var(--text-primary);
     line-height: 1.1;

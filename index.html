@@ -42,36 +42,44 @@
 <body>
 
   
+<!-- ============================================
+     NAVBAR - Tubelight Style (Sharp Corners)
+     ============================================ -->
+<nav class="navbar" id="navbar">
+    <a href="#" class="nav-logo" id="navLogo">Ato Coders</a>
 
-    <!-- ============================================
-         NAVBAR
-         ============================================ -->
-    <nav class="navbar" id="navbar">
-        <a href="#" class="nav-logo" id="navLogo">Ato Coders</a>
-
-        <div class="nav-links" id="navLinks">
-            <a href="#services" onclick="closeMobileNav()">SERVICES</a>
-            <a href="#about" onclick="closeMobileNav()">ABOUT</a>
-            <a href="#pricing" onclick="closeMobileNav()">PRICING</a>
-            <a href="#team" onclick="closeMobileNav()">TEAM</a>
-            <a href="#works" onclick="closeMobileNav()">WORK</a>
-            <a href="#contact" onclick="closeMobileNav()">CONTACT</a>
-        </div>
-
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-            <i class="fas fa-bars" id="menuIcon"></i>
-        </button>
-    </nav>
-
-    <!-- Mobile nav -->
-    <div class="mobile-nav" id="mobileNav">
-        <a href="#services" onclick="closeMobileNav()">SERVICES</a>
-        <a href="#about" onclick="closeMobileNav()">ABOUT</a>
-        <a href="#pricing" onclick="closeMobileNav()">PRICING</a>
-        <a href="#team" onclick="closeMobileNav()">TEAM</a>
-        <a href="#works" onclick="closeMobileNav()">WORK</a>
-        <a href="#contact" onclick="closeMobileNav()">CONTACT</a>
+    <!-- Desktop Navigation - Centered -->
+    <div class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-item" data-active="false">HOME</a>
+        <a href="#services" class="nav-item" data-active="false">SERVICES</a>
+        <a href="#about" class="nav-item" data-active="false">ABOUT</a>
+        <a href="#pricing" class="nav-item" data-active="false">PRICING</a>
+        <a href="#team" class="nav-item" data-active="false">TEAM</a>
+        <a href="#works" class="nav-item" data-active="false">WORK</a>
+        <a href="#contact" class="nav-item" data-active="false">CONTACT</a>
+        
+        <!-- Tubelight indicator - Line above active item -->
+<div class="tubelight" id="tubelight">
+    <div class="tubelight-line"></div>
+    <div class="tubelight-glow"></div>
+</div>
     </div>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <i class="fas fa-bars" id="menuIcon"></i>
+    </button>
+</nav>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+    <a href="#hero" class="mobile-nav-item" onclick="closeMobileNav()">HOME</a>
+    <a href="#services" class="mobile-nav-item" onclick="closeMobileNav()">SERVICES</a>
+    <a href="#about" class="mobile-nav-item" onclick="closeMobileNav()">ABOUT</a>
+    <a href="#pricing" class="mobile-nav-item" onclick="closeMobileNav()">PRICING</a>
+    <a href="#team" class="mobile-nav-item" onclick="closeMobileNav()">TEAM</a>
+    <a href="#works" class="mobile-nav-item" onclick="closeMobileNav()">WORK</a>
+    <a href="#contact" class="mobile-nav-item" onclick="closeMobileNav()">CONTACT</a>
+</div>
 
    <!-- ============================================
      HERO SECTION — Bold Typography + 360° Robot
@@ -140,7 +148,7 @@
         <!-- Section Label -->
         <div class="trusted-label reveal">
             <span class="label-dot"></span>
-            <span class="label-text">TRUSTED BY INNOVATORS</span>
+            <span class="label-text"  id="locationClock" >ETHIOPIA, GONDAR, --:--:-- --</span>
         </div>
         
         <!-- Marquee Container -->
@@ -269,7 +277,7 @@
             <!-- Section Header -->
             <div class="carousel-header">
                 <div class="header-badge">
-                    <span class="badge-dot"></span>
+                    <span class="badge-dot" ></span>
                     <span class="badge-text">WHAT WE DO</span>
                 </div>
                 <h2 class="header-heading reveal">OUR <em>SERVICES</em></h2>
@@ -437,99 +445,45 @@
             </div>
         </div>
     </section>
-    <!-- ============================================
-         CTA BAND
-         ============================================ -->
-    <section class="cta-band">
-        <div class="cta-band-inner">
-            <a href="contact.html" class="cta-go">
-                Get Started <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-    </section>
     
-    <!-- ============================================
-         INFO BAND
-         ============================================ -->
-    <section class="info-band">
-        <div class="info-band-inner">
-            <div class="location-stamp">
-                <span class="dot"></span>
-                <span id="locationClock">ADDIS ABABA, --:--:-- --</span>
-            </div>
-            <p class="info-side-text">
-                We help <em>ambitious</em> businesses capture their next wave of growth with modern web development,
-                Google Maps visibility, and professional photography.
-            </p>
-        </div>
-    </section>
+ 
     <!-- ============================================
      ABOUT SECTION — Custom Clipped Shape
      ============================================ -->
 <section class="about-section" id="about">
     <div class="about-container">
-        
+        <div class="about-badge" style="margin-left: 46%;">
+                <span class="badge-dot"></span>
+                <span class="badge-text" >ABOUT</span>
+                 
+            </div>
+            <h2 class="works-heading reveal" style="text-align: center;">WHO  <em>WE ARE</em></h2>
         <!-- Section Header -->
         <div class="about-header">
+            
             <div class="header-left">
-                <span class="star-animate">✱</span>
-                <span class="about-label">WHO WE ARE</span>
+                
+                 <!-- Left Column - Text Content -->
+            <div class="about-text-content" style="margin-top: 30px; margin-bottom: 30px;">
+                
+                
+                
             </div>
-            <div class="social-icons">
-                <a href="#" class="social-icon" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="social-icon" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="social-icon" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="#" class="social-icon" aria-label="YouTube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="#" class="social-icon" aria-label="Telegram">
-                    <i class="fab fa-telegram-plane"></i>
-                </a>
-            </div>
+            
         </div>
 
         <!-- Main Content Grid -->
         <div class="about-grid">
-            <!-- Left Column - Text Content -->
-            <div class="about-text-content">
-                <h2 class="about-headline">
-                    <span class="headline-word">Crafting</span>
-                    <span class="headline-word accent">Digital</span>
-                    <span class="headline-word">Presence</span>
-                    <span class="headline-word">That</span>
-                    <span class="headline-word">Matters.</span>
-                </h2>
+            
+           
 
-                <div class="about-description">
+               
                     <p class="description-text">
                         Based in Addis Ababa, Ato Coders is a close-knit team of developers, designers, and strategists. We partner with businesses across Ethiopia to build their digital presence from the ground up — websites that perform, listings that get found, and visuals that tell your story.
+                        <br> Every brand has a story, and we specialize in telling yours with clarity and impact. By blending creativity with strategy, we build digital solutions that resonate with your audience and drive real business growth.
                     </p>
-                    <p class="description-text">
-                        Every brand has a story, and we specialize in telling yours with clarity and impact. By blending creativity with strategy, we build digital solutions that resonate with your audience and drive real business growth.
-                    </p>
-                </div>
 
-                <!-- Stats -->
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Years Experience</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100+</span>
-                        <span class="stat-label">Projects</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">50+</span>
-                        <span class="stat-label">Happy Clients</span>
-                    </div>
-                </div>
+                
             </div>
 
             <!-- Right Column - Clipped Image with Notches -->
@@ -545,7 +499,6 @@
                 </clipPath>
             </defs>
         </svg>
-        
         <!-- Image with clip-path applied -->
         <img 
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop" 
@@ -571,7 +524,9 @@
                 <span class="notch-mini-label">EST 2020</span>
             </div>
         </div>
+        
     </div>
+    
 </div>
         </div>
 
@@ -580,6 +535,23 @@
             <button class="about-cta-btn" id="aboutCtaBtn">
                 LET'S COLLABORATE <i class="fas fa-arrow-right"></i>
             </button>
+            <div class="social-icons" style="margin-left: 41%; margin-top: 20px;" >
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Telegram">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -596,7 +568,7 @@
                 <span class="badge-text">PRICING</span>
             </div>
             <h2 class="pricing-heading reveal">CHOOSE YOUR <em>PLAN</em></h2>
-            <p class="pricing-subhead reveal">Simple, transparent pricing for every business</p>
+            
         </div>
 
         <!-- Pricing Cards Container -->
@@ -608,23 +580,19 @@
                     <div class="pricing-card-content">
                         <span class="pricing-number">(01)</span>
                         <h3 class="pricing-title">ESSENTIAL</h3>
-                        <div class="pricing-price">
-                            <span class="price-currency">$</span>
-                            <span class="price-amount">19</span>
-                            <span class="price-period">/mo</span>
-                        </div>
+                        
                         <p class="pricing-description">Perfect for startups & small businesses</p>
                         
                         <ul class="pricing-features">
-                            <li><span class="feature-check">✓</span> 1 Website</li>
-                            <li><span class="feature-check">✓</span> 5 Pages</li>
-                            <li><span class="feature-check">✓</span> Basic SEO</li>
+                            <li><span class="feature-check">✓</span> Website</li>
+                            <li><span class="feature-check">✓</span> 1 Page</li>
+                            <li><span class="feature-check">✓</span> Google Maps Setup</li>
                             <li><span class="feature-check">✓</span> Email Support</li>
                         </ul>
                         
-                        <button class="pricing-btn essential-btn">
-                            Get Started <i class="fas fa-arrow-right"></i>
-                        </button>
+                        <a href="#contact" class="pricing-btn essential-btn">
+                            Contact Us <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -636,25 +604,21 @@
                     <div class="pricing-card-content">
                         <span class="pricing-number">(02)</span>
                         <h3 class="pricing-title">PROFESSIONAL</h3>
-                        <div class="pricing-price">
-                            <span class="price-currency">$</span>
-                            <span class="price-amount">49</span>
-                            <span class="price-period">/mo</span>
-                        </div>
+                        
                         <p class="pricing-description">For growing businesses ready to scale</p>
                         
                         <ul class="pricing-features">
-                            <li><span class="feature-check">✓</span> 3 Websites</li>
-                            <li><span class="feature-check">✓</span> 15 Pages</li>
-                            <li><span class="feature-check">✓</span> Advanced SEO</li>
+                            <li><span class="feature-check">✓</span>  Full website design</li>
+                            <li><span class="feature-check">✓</span>  Multiple Pages</li>
                             <li><span class="feature-check">✓</span> Priority Support</li>
                             <li><span class="feature-check">✓</span> Google Maps Setup</li>
                             <li><span class="feature-check">✓</span> 5 Photos</li>
+                            <li><span class="feature-check">✓</span> Video Production</li>
                         </ul>
                         
-                        <button class="pricing-btn professional-btn">
-                            Go Pro <i class="fas fa-arrow-right"></i>
-                        </button>
+                        <a href="#contact" class="pricing-btn professional-btn">
+                            Contact Us <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -665,53 +629,27 @@
                     <div class="pricing-card-content">
                         <span class="pricing-number">(03)</span>
                         <h3 class="pricing-title">ENTERPRISE</h3>
-                        <div class="pricing-price">
-                            <span class="price-currency">$</span>
-                            <span class="price-amount">99</span>
-                            <span class="price-period">/mo</span>
-                        </div>
+                        
                         <p class="pricing-description">For large organizations</p>
                         
                         <ul class="pricing-features">
-                            <li><span class="feature-check">✓</span> Unlimited Websites</li>
-                            <li><span class="feature-check">✓</span> Unlimited Pages</li>
-                            <li><span class="feature-check">✓</span> Premium SEO</li>
+                            <li><span class="feature-check">✓</span> Full website design</li>
+                            <li><span class="feature-check">✓</span> Customized UI/UX</li>
                             <li><span class="feature-check">✓</span> 24/7 Phone Support</li>
                             <li><span class="feature-check">✓</span> Google Maps Premium</li>
                             <li><span class="feature-check">✓</span> 20+ Photos</li>
                             <li><span class="feature-check">✓</span> Video Production</li>
                         </ul>
                         
-                        <button class="pricing-btn enterprise-btn">
+                        <a href="#contact" class="pricing-btn enterprise-btn">
                             Contact Us <i class="fas fa-arrow-right"></i>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
 
-<!-- Custom Enterprise Solution - Minimal -->
-<div class="pricing-enterprise reveal">
-    <div class="enterprise-divider">
-        <span class="divider-line"></span>
-        <span class="divider-plus">✚</span>
-        <span class="divider-line"></span>
-    </div>
-    
-    <div class="enterprise-wrapper">
-        <p class="enterprise-question">Need a custom solution?</p>
-        <a href="#contact" class="enterprise-link">
-            Contact us for enterprise pricing
-            <i class="fas fa-arrow-right"></i>
-        </a>
-    </div>
-    
-    <div class="enterprise-divider">
-        <span class="divider-line"></span>
-        <span class="divider-plus">✚</span>
-        <span class="divider-line"></span>
-    </div>
-</div>
+
     </div>
 </section>
 
@@ -723,10 +661,14 @@
     <div class="team-section-inner">
         <!-- Section Header with border top like reference -->
         <div class="team-header">
-            <span class="team-caption">OUR TEAM</span>
+            <div class="works-badge">
+                <span class="badge-dot"></span>
+                <span class="badge-text">TEAM</span>
+            </div>
+            <h2 class="team-heading reveal">OUR <em>TEAM</em></h2>
             <div class="team-header-content">
-                <div class="team-header-left">
-                    <h2 class="team-heading reveal">OUR DREAM <em>TEAM</em></h2>
+                <div class="team-header-left" >
+                    
                 </div>
             </div>
         </div>
@@ -872,6 +814,7 @@
      PREVIOUS WORKS — Portfolio Showcase
      ============================================ -->
 <section class="works-section" id="works">
+    
     <div class="works-container">
         
         <!-- Section Header -->
@@ -881,7 +824,6 @@
                 <span class="badge-text">PORTFOLIO</span>
             </div>
             <h2 class="works-heading reveal">PREVIOUS <em>WORKS</em></h2>
-            <p class="works-subhead reveal">A selection of projects we've delivered for our clients</p>
         </div>
 
         <!-- Works Grid -->
@@ -961,12 +903,6 @@
                     <span class="work-year">2024</span>
                 </div>
             </div>
-
-           
-
-            
-
-            
         </div>
 
         <!-- View All Link -->
@@ -981,8 +917,14 @@
      CONTACT SECTION — With Contact Card Component
      ============================================ -->
     <section class="contact-section" id="contact">
+        <!-- Contact Card Container -->
+              <div class="contact-badge" style="margin-left: 46%;">
+                <span class="badge-dot"></span>
+                <span class="badge-text" >CONTACT</span>
+            </div><br>
+            <h2 class="contact-heading reveal">CONTACT <em>WITH US</em></h2>
         <div class="contact-section-inner">
-            <!-- Contact Card Container -->
+            
             <div class="contact-card">
                 <!-- Decorative Plus Icons (4 corners) -->
                 <div class="contact-plus top-left">✚</div>
@@ -993,9 +935,7 @@
                 <!-- Left Content Area -->
                 <div class="contact-content">
                     <div class="contact-text-content">
-                        <h2 class="contact-heading">CONTACT WITH US</h2>
-                        <p class="contact-description">If you have any questions regarding our Services or need help,
-                            please fill out the form here. We do our best to respond within 1 business day.</p>
+                        
 
                         <!-- Contact Info Grid -->
                         <div class="contact-info-grid">
@@ -1148,30 +1088,148 @@
          VANILLA JS
          ============================================ -->
     <script>
-        /* ---------- NAVBAR SCROLL ---------- */
-        const navbar = document.getElementById('navbar');
-
-        window.addEventListener('scroll', () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 40);
-        }, { passive: true });
-
-        /* ---------- MOBILE MENU ---------- */
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileNav = document.getElementById('mobileNav');
-        const menuIcon = document.getElementById('menuIcon');
-        let menuOpen = false;
-
+        /* ---------- TUBELIGHT NAVBAR ---------- */
+document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.getElementById('navbar');
+    const navItems = document.querySelectorAll('.nav-item');
+    const tubelight = document.getElementById('tubelight');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const menuIcon = document.getElementById('menuIcon');
+    
+    let activeIndex = 0; // Default to first item (Services)
+    let menuOpen = false;
+    
+    // Set initial active state
+    function setActiveItem(index) {
+        // Remove active class from all items
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            item.setAttribute('data-active', 'false');
+        });
+        
+        // Add active class to current item
+        navItems[index].classList.add('active');
+        navItems[index].setAttribute('data-active', 'true');
+        activeIndex = index;
+        
+        // Move tubelight
+        moveTubelight(index);
+    }
+    
+    // Move tubelight to active item
+    function moveTubelight(index) {
+        if (!tubelight || navItems.length === 0) return;
+        
+        const activeItem = navItems[index];
+        const itemRect = activeItem.getBoundingClientRect();
+        const containerRect = document.querySelector('.nav-links').getBoundingClientRect();
+        
+        // Calculate position relative to container
+        const left = activeItem.offsetLeft;
+        const width = itemRect.width;
+        
+        tubelight.style.width = `${width}px`;
+        tubelight.style.left = `${left}px`;
+        tubelight.style.top = '4px'; // Adjust based on padding
+        tubelight.style.height = '40px';
+    }
+    
+    // Initialize tubelight position
+    if (navItems.length > 0) {
+        // Check URL hash for active section
+        const hash = window.location.hash;
+        if (hash) {
+            for (let i = 0; i < navItems.length; i++) {
+                if (navItems[i].getAttribute('href') === hash) {
+                    setActiveItem(i);
+                    break;
+                }
+            }
+        } else {
+            setActiveItem(0); // Default to first item
+        }
+    }
+    
+    // Add click handlers to nav items
+    navItems.forEach((item, index) => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active from all, add to current
+            setActiveItem(index);
+            
+            // Smooth scroll to section
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+            
+            // Update URL hash without page jump
+            history.pushState(null, null, targetId);
+        });
+    });
+    
+    // Update active item on scroll (optional - highlights as you scroll)
+    function updateActiveOnScroll() {
+        const sections = [];
+        navItems.forEach(item => {
+            const targetId = item.getAttribute('href');
+            const section = document.querySelector(targetId);
+            if (section) sections.push(section);
+        });
+        
+        const scrollPosition = window.scrollY + 150; // Offset
+        
+        for (let i = sections.length - 1; i >= 0; i--) {
+            const section = sections[i];
+            if (section.offsetTop <= scrollPosition) {
+                if (activeIndex !== i) {
+                    setActiveItem(i);
+                }
+                break;
+            }
+        }
+    }
+    
+    window.addEventListener('scroll', updateActiveOnScroll);
+    
+    // Handle resize
+    window.addEventListener('resize', () => {
+        if (navItems.length > 0) {
+            moveTubelight(activeIndex);
+        }
+    });
+    
+    // Mobile menu toggle
+    if (mobileMenuBtn && mobileNav) {
         mobileMenuBtn.addEventListener('click', () => {
             menuOpen = !menuOpen;
             mobileNav.classList.toggle('active', menuOpen);
             menuIcon.className = menuOpen ? 'fas fa-times' : 'fas fa-bars';
         });
-
-        function closeMobileNav() {
-            menuOpen = false;
-            mobileNav.classList.remove('active');
-            menuIcon.className = 'fas fa-bars';
+    }
+    
+    // Close mobile nav when clicking a link
+    window.closeMobileNav = function() {
+        menuOpen = false;
+        if (mobileNav) mobileNav.classList.remove('active');
+        if (menuIcon) menuIcon.className = 'fas fa-bars';
+    };
+    
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
         }
+    }, { passive: true });
+});
 
         /* ---------- LIVE CLOCK ---------- */
         function updateClock() {
@@ -1182,7 +1240,7 @@
             const ampm = h >= 12 ? 'PM' : 'AM';
             const h12 = h % 12 || 12;
             const time = `${String(h12).padStart(2, '0')}:${m}:${s} ${ampm}`;
-            document.getElementById('locationClock').textContent = `ADDIS ABABA, ${time}`;
+            document.getElementById('locationClock').textContent = `ETHIOPIA, GONDAR, ${time}`;
         }
 
         updateClock();

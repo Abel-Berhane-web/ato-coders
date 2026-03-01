@@ -1,13 +1,12 @@
-
-        /* ===================================================
-     PRICING SECTION — 3 Plans with Featured Middle
+/* ===================================================
+     PRICING SECTION — Complete Styles
      =================================================== */
+
+/* Main Section */
 .pricing-section {
     width: 100%;
     padding: var(--space-2xl) 60px;
     background: var(--bg-primary);
-    border-top: 1px solid var(--border-default);
-    border-bottom: 1px solid var(--border-default);
     overflow: hidden;
 }
 
@@ -29,6 +28,22 @@
     border: 1px solid var(--border-default);
     padding: 8px 20px;
     margin-bottom: 24px;
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.badge-text {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 .pricing-heading {
@@ -55,12 +70,12 @@
     line-height: 1.7;
 }
 
-/* Pricing Row - Flex for centering */
+/* Pricing Row - Increased gap between cards */
 .pricing-row {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 60px;
     flex-wrap: wrap;
     margin: 40px 0 20px;
 }
@@ -70,6 +85,7 @@
     width: 300px;
     transition: all 0.4s var(--ease-default);
     position: relative;
+    overflow: visible !important;
 }
 
 .pricing-card-inner {
@@ -80,6 +96,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 2;
 }
 
 /* Left Card - Inclined */
@@ -132,19 +150,18 @@
     height: 100%;
 }
 
+/* Hide price elements */
+.price-currency, .price-amount, .price-period {
+    display: none;
+}
+
 /* Center card text colors */
 .pricing-card-center .pricing-number,
 .pricing-card-center .pricing-title,
-.pricing-card-center .price-amount,
-.pricing-card-center .price-currency,
 .pricing-card-center .pricing-description,
 .pricing-card-center .pricing-features li,
 .pricing-card-center .feature-check {
     color: white;
-}
-
-.pricing-card-center .price-period {
-    color: rgba(255, 255, 255, 0.7);
 }
 
 .pricing-card-center .pricing-features {
@@ -175,34 +192,6 @@
     margin-bottom: 15px;
 }
 
-.pricing-price {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: baseline;
-    gap: 2px;
-}
-
-.price-currency {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--accent);
-    align-self: flex-start;
-    margin-top: 5px;
-}
-
-.price-amount {
-    font-size: 48px;
-    font-weight: 900;
-    color: var(--text-primary);
-    line-height: 1;
-}
-
-.price-period {
-    font-size: 14px;
-    color: var(--text-muted);
-    margin-left: 5px;
-}
-
 .pricing-description {
     font-size: 13px;
     color: var(--text-muted);
@@ -216,7 +205,7 @@
 .pricing-features {
     list-style: none;
     padding: 0;
-    margin: 0 0 30px;
+    margin: 0 0 40px;
     flex: 1;
 }
 
@@ -242,13 +231,17 @@
     min-width: 20px;
 }
 
-/* Buttons */
+/* ===================================================
+     BUTTON STYLES - WITH GLOW EFFECTS
+     =================================================== */
+
+/* Button base styles */
 .pricing-btn {
     width: 100%;
     background: transparent;
     border: 1px solid var(--border-hover);
     color: var(--text-primary);
-    padding: 14px 20px;
+    padding: 16px 20px;
     font-family: var(--font-body);
     font-size: 14px;
     font-weight: 600;
@@ -261,44 +254,205 @@
     justify-content: center;
     gap: 10px;
     margin-top: auto;
+    text-decoration: none;
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
 }
 
+/* Button icon animation */
 .pricing-btn i {
     transition: transform 0.3s var(--ease-default);
 }
 
 .pricing-btn:hover i {
-    transform: translateX(5px);
+    transform: translateX(8px);
 }
 
-/* Essential Button */
+/* Essential button */
+.essential-btn {
+    background: transparent;
+    border-color: var(--border-hover);
+    position: relative;
+}
+
 .essential-btn:hover {
     background: var(--accent);
     border-color: var(--accent);
-    box-shadow: 0 0 30px rgba(255, 77, 0, 0.25);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px var(--accent);
 }
 
-/* Professional Button (Center Card) */
+/* Professional button (Center Card) */
 .pricing-card-center .professional-btn {
     background: white;
     border-color: white;
     color: var(--accent);
+    position: relative;
 }
 
 .pricing-card-center .professional-btn:hover {
-    background: rgba(255, 255, 255, 0.9);
+    background: white;
     border-color: white;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    color: var(--accent);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 0 40px white, 0 0 60px var(--accent);
 }
 
-/* Enterprise Button */
+/* Enterprise button */
+.enterprise-btn {
+    background: transparent;
+    border-color: var(--border-hover);
+    position: relative;
+}
+
 .enterprise-btn:hover {
     background: var(--accent);
     border-color: var(--accent);
-    box-shadow: 0 0 30px rgba(255, 77, 0, 0.25);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 0 40px var(--accent);
 }
 
-/* Hover Effects */
+/* ===================================================
+     CARD GLOW EFFECTS - ACCENT COLOR AROUND CORNERS
+     =================================================== */
+
+/* Corner glow for all cards - using accent color */
+.pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, var(--accent), transparent 70%),
+                radial-gradient(circle at top right, var(--accent), transparent 70%),
+                radial-gradient(circle at bottom left, var(--accent), transparent 70%),
+                radial-gradient(circle at bottom right, var(--accent), transparent 70%);
+    opacity: 0.4;
+    transition: opacity 0.4s var(--ease-default);
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+
+/* Stronger corner glow on hover */
+.pricing-card:hover::before {
+    opacity: 0.8;
+}
+
+/* Even stronger glow for center card (featured) */
+.pricing-card-center::before {
+    opacity: 0.6;
+    background: radial-gradient(circle at top left, white, transparent 70%),
+                radial-gradient(circle at top right, white, transparent 70%),
+                radial-gradient(circle at bottom left, white, transparent 70%),
+                radial-gradient(circle at bottom right, white, transparent 70%);
+}
+
+.pricing-card-center:hover::before {
+    opacity: 1;
+}
+
+/* Alternative: Individual corner glows with different intensities */
+
+/* Top left corner glow */
+.pricing-card::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at top left, var(--accent), transparent 70%);
+    opacity: 0.5;
+    transition: opacity 0.4s var(--ease-default);
+    z-index: 1;
+    pointer-events: none;
+    filter: blur(5px);
+}
+
+/* Top right corner glow */
+.pricing-card .glow-tr {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at top right, var(--accent), transparent 70%);
+    opacity: 0.5;
+    transition: opacity 0.4s var(--ease-default);
+    z-index: 1;
+    pointer-events: none;
+    filter: blur(5px);
+}
+
+/* Bottom left corner glow */
+.pricing-card .glow-bl {
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at bottom left, var(--accent), transparent 70%);
+    opacity: 0.5;
+    transition: opacity 0.4s var(--ease-default);
+    z-index: 1;
+    pointer-events: none;
+    filter: blur(5px);
+}
+
+/* Bottom right corner glow */
+.pricing-card .glow-br {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at bottom right, var(--accent), transparent 70%);
+    opacity: 0.5;
+    transition: opacity 0.4s var(--ease-default);
+    z-index: 1;
+    pointer-events: none;
+    filter: blur(5px);
+}
+
+.pricing-card:hover .glow-tr,
+.pricing-card:hover .glow-bl,
+.pricing-card:hover .glow-br,
+.pricing-card:hover::after {
+    opacity: 0.9;
+    filter: blur(8px);
+}
+
+/* Simpler version - just use one combined glow */
+.simple-corner-glow {
+    position: relative;
+}
+
+.simple-corner-glow::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: conic-gradient(from 0deg, transparent, var(--accent), transparent, var(--accent), transparent);
+    opacity: 0.2;
+    transition: opacity 0.4s var(--ease-default);
+    z-index: 1;
+    pointer-events: none;
+    filter: blur(15px);
+}
+
+.simple-corner-glow:hover::before {
+    opacity: 0.5;
+}
+
+/* Hover Effects for Cards */
 .pricing-card-left:hover .pricing-card-inner {
     transform: rotate(-3deg) translateY(5px);
     border-color: var(--accent);
@@ -313,7 +467,6 @@
     transform: scale(1.12);
 }
 
-
 /* ===================================================
      PRICING ENTERPRISE — Minimal Design
      =================================================== */
@@ -323,7 +476,7 @@
     text-align: center;
 }
 
-/* Divider with plus signs (matching your other sections) */
+/* Divider with plus signs */
 .enterprise-divider {
     display: flex;
     align-items: center;
@@ -389,45 +542,16 @@
     transform: translateX(5px);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .enterprise-wrapper {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .divider-line {
-        width: 30px;
-    }
-    
-    .enterprise-question {
-        font-size: 15px;
-    }
-    
-    .enterprise-link {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .pricing-enterprise {
-        margin-top: 40px;
-        padding: 20px 0;
-    }
-    
-    .enterprise-divider {
-        gap: 10px;
-    }
-    
-    .divider-line {
-        width: 20px;
-    }
-}
-
-/* Responsive */
+/* ===================================================
+     RESPONSIVE STYLES
+     =================================================== */
 @media (max-width: 1024px) {
     .pricing-card {
         width: 280px;
+    }
+    
+    .pricing-row {
+        gap: 40px;
     }
     
     .pricing-card-left .pricing-card-inner,
@@ -447,7 +571,7 @@
     
     .pricing-row {
         flex-direction: column;
-        gap: 40px;
+        gap: 50px;
     }
     
     .pricing-card {
@@ -468,41 +592,66 @@
     .pricing-card-center:hover {
         transform: scale(1.02);
     }
+    
+    /* Enterprise responsive */
+    .enterprise-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .divider-line {
+        width: 30px;
+    }
+    
+    .enterprise-question {
+        font-size: 15px;
+    }
+    
+    .enterprise-link {
+        font-size: 14px;
+    }
+    
+    /* Keep corner glows on mobile */
+    .pricing-card::before {
+        opacity: 0.3;
+    }
 }
 
+@media (max-width: 480px) {
+    .pricing-enterprise {
+        margin-top: 40px;
+        padding: 20px 0;
+    }
+    
+    .pricing-row {
+        gap: 40px;
+    }
+    
+    .enterprise-divider {
+        gap: 10px;
+    }
+    
+    .divider-line {
+        width: 20px;
+    }
+    
+    .pricing-title {
+        font-size: 24px;
+    }
+    
+    .pricing-features li {
+        font-size: 13px;
+    }
+}
 
-
-/* Subtle floating animation */
-@keyframes subtle-float {
-    0% {
-        transform: translateY(0px);
+/* Animation for badge dot */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(255, 77, 0, 0.5);
     }
     50% {
-        transform: translateY(-5px);
+        opacity: 0.7;
+        box-shadow: 0 0 0 8px rgba(255, 77, 0, 0);
     }
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-.pricing-card {
-    animation: subtle-float 8s ease-in-out infinite;
-}
-
-.pricing-card-left {
-    animation-delay: 0.3s;
-}
-
-.pricing-card-center {
-    animation-delay: 0.6s;
-    animation-duration: 7s;
-}
-
-.pricing-card-right {
-    animation-delay: 0.9s;
-    animation-duration: 9s;
-}
-
-.pricing-card:hover {
-    animation-play-state: paused;
 }

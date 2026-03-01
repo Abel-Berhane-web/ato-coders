@@ -6,7 +6,6 @@
     width: 100%;
     padding: var(--space-xl) 60px var(--space-lg);
     background: var(--bg-deep);
-    border-top: 1px solid var(--border-default);
 }
 
 .footer-inner {
