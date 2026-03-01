@@ -338,22 +338,84 @@
         font-size: clamp(40px, 10vw, 55px);
     }
 }
-
-/* FORCE 3D TO SHOW ON MOBILE - ADD THIS AT THE END */
+/* FORCE 3D TO SHOW ON MOBILE - FIXED VERSION */
 @media (max-width: 768px) {
+    /* Keep 3D visible */
     .hero-spline-bg {
         display: block !important;
         position: absolute !important;
-        height: 50vh !important;
-        min-height: 350px !important;
-        top: 72px !important;
+        height: 100vh !important; /* Full viewport height */
+        min-height: 100vh !important;
+        top: 0 !important;
     }
     
+    /* Hide mobile placeholder */
     .hero-spline-mobile {
         display: none !important;
     }
     
+    /* Make hero container relative for proper stacking */
+    .hero {
+        position: relative !important;
+        min-height: 100vh !important;
+        height: auto !important;
+    }
+    
+    /* Position content over the 3D */
     .hero-content {
-        padding-top: 350px !important;
+        position: relative !important;
+        z-index: 20 !important;
+        padding: 100px 24px 40px !important; /* Adjust top padding as needed */
+        min-height: 100vh !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important; /* Center content vertically */
+        background: transparent !important; /* Remove any background */
+    }
+    
+    /* Make text visible over 3D */
+    .hero-text {
+        position: relative !important;
+        z-index: 25 !important;
+        color: white !important;
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.7) !important; /* Add shadow for readability */
+    }
+    
+    /* Ensure title is visible */
+    .hero-title {
+        margin-left: 0 !important;
+        font-size: clamp(48px, 12vw, 70px) !important;
+        color: white !important;
+        text-shadow: 0 0 30px rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    /* Ensure outline text is visible */
+    .outline-text {
+        -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.9) !important;
+    }
+    
+    /* Position subcopy */
+    .hero__subcopy {
+        position: relative !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin-top: 30px !important;
+        max-width: 100% !important;
+        text-align: left !important;
+        padding: 0 !important;
+        width: 100% !important;
+        z-index: 25 !important;
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.7) !important;
+    }
+    
+    /* Optional: Add a subtle dark overlay for better text readability */
+    .hero-overlay {
+        display: block !important;
+        background: linear-gradient(to bottom, 
+            rgba(0,0,0,0.3) 0%, 
+            rgba(0,0,0,0.1) 50%,
+            rgba(0,0,0,0.3) 100%) !important;
+        width: 100% !important;
+        height: 100% !important;
     }
 }
