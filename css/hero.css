@@ -188,29 +188,7 @@
     opacity: 0.8;
 }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-    .hero-title {
-        margin-left: 0; /* Reset on mobile */
-    }
-    
-    .hero__subcopy {
-        position: relative;
-        right: auto;
-        bottom: auto;
-        margin-top: 2rem;
-        max-width: 100%;
-        text-align: left;
-        padding: 0 24px;
-    }
-    
-    .hero__tagline, 
-    .hero__desc {
-        text-align: left;
-    }
-}
-
-        /* ===================================================
+      /* ===================================================
            INFO BAND — Location + Case Study
            =================================================== */
         .info-band {
@@ -276,3 +254,106 @@
             font-style: italic;
             color: var(--text-primary);
         }
+
+        /* ===================================================
+     MOBILE FIXES ONLY - DO NOT CHANGE ANYTHING ELSE
+     =================================================== */
+@media (max-width: 768px) {
+    
+    /* Make 3D visible on mobile */
+    .hero-spline-bg {
+        position: absolute; /* Keep as absolute */
+        height: 50vh; /* Give it fixed height */
+        min-height: 350px;
+        top: 72px; /* Below navbar */
+    }
+    
+    /* Adjust hero container for mobile */
+    .hero {
+        min-height: auto;
+        flex-direction: column;
+        height: auto;
+    }
+    
+    /* Fix content positioning */
+    .hero-content {
+        position: relative;
+        z-index: 10;
+        padding: 350px 24px 40px; /* Push content below 3D */
+        min-height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    /* Make title stack vertically */
+    .hero-title {
+        font-size: clamp(48px, 12vw, 70px);
+        margin-left: 0;
+        line-height: 1;
+    }
+    
+    /* Remove those crazy margins on mobile */
+    .hero-title .outline-text,
+    .hero-title .accent-text,
+    .hero-title span {
+        margin-left: 0 !important;
+        display: inline-block;
+    }
+    
+    /* Force line break after BUILD */
+    .hero-title br {
+        display: block;
+    }
+    
+    /* Position subcopy below title */
+    .hero__subcopy {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin-top: 30px;
+        max-width: 100%;
+        text-align: left;
+        padding: 0;
+        width: 100%;
+    }
+    
+    /* Hide the mobile placeholder */
+    .hero-spline-mobile {
+        display: none;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 300px 20px 30px;
+    }
+    
+    .hero-spline-bg {
+        height: 45vh;
+        min-height: 280px;
+    }
+    
+    .hero-title {
+        font-size: clamp(40px, 10vw, 55px);
+    }
+}
+
+/* FORCE 3D TO SHOW ON MOBILE - ADD THIS AT THE END */
+@media (max-width: 768px) {
+    .hero-spline-bg {
+        display: block !important;
+        position: absolute !important;
+        height: 50vh !important;
+        min-height: 350px !important;
+        top: 72px !important;
+    }
+    
+    .hero-spline-mobile {
+        display: none !important;
+    }
+    
+    .hero-content {
+        padding-top: 350px !important;
+    }
+}
